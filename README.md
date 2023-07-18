@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+Create applications to check password strength 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+using a distributed framework and custom hooks: 
 
-## Available Scripts
+The essence of the task:
+Create a field for entering a password, under the field add 3 sections that will show the reliability of the password;
+Password strength changes must occur in real time;
+How to calculate password reliability:
+Only letters/numbers/symbols - the password is simple;
+A combination of letter-symbols/letter-numbers/number-symbols - medium password;
+Contains letters, symbols and numbers - the password is reliable;
+The color of the sections will depend on the reliability of the password:
+If the field is empty, all sections are gray;
+If the field contains less than 8 characters, all sections are red;
+If the password is simple - the first section is red, the others are gray;
+If the password is medium - the first two sections are yellow, the last is gray;
+If the password is strong, all sections will be green;
 
-In the project directory, you can run:
+ABOUT :
+In the code above, we have a component called PasswordStrengthChecker that renders the password input field and three sections for password strength. We also have a custom hook called usePasswordStrength that handles the password state and calculates the password strength.
 
-### `npm start`
+The usePasswordStrength custom hook sets up the password state and calculates the password strength based on the rules you provided. It uses the useState and useEffect hooks from React to manage the state and update the password strength in real time when the password changes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Now, you can use the PasswordStrengthChecker component in your application to check the password strength. The password strength will be updated in real time as the user types in the password, and the color of the sections will change based on the password strength.
